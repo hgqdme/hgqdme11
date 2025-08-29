@@ -14,7 +14,7 @@ module l2_to_ip_shim(
 );
     // For bring-up: just echo whenever CRC OK seen (one-shot).
     reg gating;
-    always @(posedge clk or negedge rst_n) begin
+    always @(posedge clk or negedge rst_n) begin //first githh
         if(!rst_n) begin
             gating <= 1'b0;
             out_we <= 1'b0;
